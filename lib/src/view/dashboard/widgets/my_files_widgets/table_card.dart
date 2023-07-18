@@ -83,42 +83,33 @@ class TableItem extends StatelessWidget {
           ))
         ],
         rows: List.generate(recentFilesList.length, (index) {
-          return DataRow(
-              onLongPress: () {},
-         
-              cells: [
-                DataCell(SvgPicture.asset(
-                  recentFilesList[index].icon,
-                  height: context.resizeHelper(
-                      mobile: 25.h,
-                      minTablet: 25.h,
-                      tablet: 20.h,
-                      desktop: 30.h),
-                  width: context.resizeHelper(
-                      mobile: 25.w,
-                      minTablet: 25.w,
-                      tablet: 20.w,
-                      desktop: 30.w),
-                )),
-                DataCell(Text(
-                  recentFilesList[index].title,
-                  style: TextStyle(
-                      fontSize: context.resizeHelper(
-                          mobile: 12.sp,
-                          minTablet: 9.sp,
-                          tablet: 7.sp,
-                          desktop: 5.sp)),
-                )),
-                DataCell(Text(
-                  recentFilesList[index].date,
-                  style: TextStyle(
-                      fontSize: context.resizeHelper(
-                          mobile: 12.sp,
-                          minTablet: 9.sp,
-                          tablet: 7.sp,
-                          desktop: 4.sp)),
-                )),
-              ]);
+          return DataRow(onLongPress: () {}, cells: [
+            DataCell(SvgPicture.asset(
+              recentFilesList[index].icon,
+              height: context.resizeHelper(
+                  mobile: 25.h, minTablet: 25.h, tablet: 20.h, desktop: 30.h),
+              width: context.resizeHelper(
+                  mobile: 25.w, minTablet: 25.w, tablet: 20.w, desktop: 30.w),
+            )),
+            DataCell(Text(
+              recentFilesList[index].title,
+              style: TextStyle(
+                  fontSize: context.resizeHelper(
+                      mobile: 12.sp,
+                      minTablet: 9.sp,
+                      tablet: 7.sp,
+                      desktop: 5.sp)),
+            )),
+            DataCell(Text(
+              recentFilesList[index].date,
+              style: TextStyle(
+                  fontSize: context.resizeHelper(
+                      mobile: 12.sp,
+                      minTablet: 9.sp,
+                      tablet: 7.sp,
+                      desktop: 4.sp)),
+            )),
+          ]);
         }));
   }
 }
