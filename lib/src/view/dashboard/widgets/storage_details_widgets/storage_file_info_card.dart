@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:responsiv_ui_example/src/models/storage_file_model.dart';
 import 'package:responsiv_ui_example/src/utils/extension.dart';
@@ -41,9 +42,7 @@ class StorageFileInfoCard extends StatelessWidget {
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: context.resizeHelper(
-                          mobile: context.width * 0.012,
-                          tablet: context.width * 0.015,
-                          desktop: context.width * 0.013)),
+                          mobile: 7.sp, tablet: 6.sp, desktop: 5.sp)),
                 ),
                 Text(
                   "${_fileInfoModel.counter}",
